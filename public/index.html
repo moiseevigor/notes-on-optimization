@@ -1,0 +1,86 @@
+<!doctype html>
+<meta charset="utf-8">
+<script src="https://distill.pub/template.v1.js"></script>
+
+<script type="text/javascript">
+    window.MathJax = {
+        tex: {
+            packages: ['base', 'ams']
+        },
+        loader: {
+            load: ['ui/menu', '[tex]/ams']
+        }
+    };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+<script type="text/front-matter">
+  title: "Optimization as a Problem of Mathematical Control"
+  description: "Notes on Optimization Techniques in Deep Learning"
+  authors:
+  - Igor Moiseev: http://moiseevigor.github.io/
+  affiliations:
+  - Standard Cognition: https://standard.ai/
+</script>
+
+<dt-article>
+    <h1>Optimization as a Problem of Mathematical Control</h1>
+    <h2>Notes on optimization techniques in deep learning and how it relates to the mathematical control.</h2>
+    <dt-byline></dt-byline>
+    
+    <p>In this article we would like to consider optimization problems appearing in the deep learning theory as a optimal control problem of dynamical systems. Where model parameters such as learning rate, momentum etc are controlled parameters.</p>
+
+    <p>The objective is to minimize a Loss function in minimal amount of steps of the optimization algorithm, time. In course of many years it was developed a wast series of optimization techniques and algorithms, the most famous and effective to be Gradient decent (GD) <dt-cite key="amari1998natural"></dt-cite> and its variant Stochastic Gradient Descent for stochastic objective function and SGD with momentum <dt-cite key="qian1999momentum"></dt-cite>, Adam - adaptive moment estimation, an algorithm for first-order gradient-based optimization of stochastic objective functions, based on adaptive estimates of lower-order moments <dt-cite key="kingma2014adam"></dt-cite> and many others.  </p>
+    
+    
+    
+    <p>We can also cite <dt-cite key="goh2017why"></dt-cite> 
+        external publications.</p>
+
+</dt-article>
+
+<dt-appendix>
+</dt-appendix>
+
+<script type="text/bibliography">
+    @article{goh2017why,
+        author = {Goh, Gabriel},
+        title = {Why Momentum Really Works},
+        journal = {Distill},
+        year = {2017},
+        url = {http://distill.pub/2017/momentum},
+        doi = {10.23915/distill.00006}
+    }
+    @article{kingma2014adam,
+        title={Adam: A method for stochastic optimization},
+        author={Kingma, Diederik and Ba, Jimmy},
+        journal={arXiv preprint arXiv:1412.6980},
+        year={2014},
+        url={https://arxiv.org/abs/1412.6980}
+    }
+    @article{qian1999momentum,
+        title={On the momentum term in gradient descent learning algorithms},
+        author={Qian, Ning},
+        journal={Neural networks},
+        volume={12},
+        number={1},
+        pages={145--151},
+        year={1999},
+        publisher={Elsevier},
+        doi={10.1016/s0893-6080(98)00116-6},
+        url={https://pdfs.semanticscholar.org/735d/4220d5579cc6afe956d9f6ea501a96ae99e2.pdf}
+    }
+    @article{amari1998natural,
+        title={Natural gradient works efficiently in learning},
+        author={Amari, Shun-Ichi},
+        journal={Neural computation},
+        volume={10},
+        number={2},
+        pages={251--276},
+        year={1998},
+        publisher={MIT Press},
+        doi={10.1162/089976698300017746},
+        url={http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.452.7280&rep=rep1&type=pdf}
+    }
+</script>
